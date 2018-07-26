@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--@author 孙磊-->
+<!--@time 2018/7/19-->
+<!--@note dao层映射文件-->
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.car.dao.ImageMapper">
+    <!--对应接口函数以及返回数据对应的实体类-->
+    <select id="queryById" resultType="com.car.entity.Image">
+        select * from dbo.image where c_id=#{cId};
+    </select>
+</mapper>

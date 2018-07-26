@@ -1,0 +1,147 @@
+/*<!--@author 黄伟 杨圳达-->*/
+/*<!--@time 2018/7/15-->*/
+/*<!--@apiNote 车详情->*/
+a:link{
+    text-decoration: none; !important;
+}
+a:hover{
+    text-decoration: none; !important;
+}
+a:visited{
+    text-decoration: none; !important;
+}
+a:active{
+    text-decoration: none; !important;
+}
+.cars {
+    background-color: #d4d4d4;
+    color:white;
+    margin:20px;
+    padding:20px;
+    display: flex;
+    flex-direction: row;
+}
+/*.nav{*/
+/*background-color: lightgray;*/
+/*color: white;*/
+/*padding: 10px;*/
+/*display: flex;*/
+/*font-size: 20px;*/
+/*margin-left: 20px;*/
+/*margin-right: 20px;*/
+/*!*flex:1;*!*/
+/*}*/
+.a{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.nav_div{
+    color:black;
+}
+.body{
+    display:flex;
+    flex-direction: row;
+
+    margin-top: 70px;
+    margin-bottom: 10px;
+    margin-left: 120px;
+    margin-right: 120px;
+}
+.body_left{
+    display:flex;
+    flex-direction: column;
+    width:50%;
+    margin-right: 100px;
+    margin-top: 10px;
+    margin-bottom: 100px;
+}
+.body_left_change{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.body_right{
+    display: flex;
+    flex-direction: column;
+}
+.body_left_change_img{
+    height:85px;
+    width: 110px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.body_left_change_img:hover{
+    height:85px;
+    width:110px;
+    border: #ff5f58 solid 4px;
+    border-radius: 2px;
+}
+.body_right_info_1{
+    height: 80px;
+    width: 460px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 80px;
+}
+.body_right_info_2{
+    height: 100px;
+    width: 460px;
+    background-color: #e2e2e2;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.body_right_info_3{
+    height: 120px;
+    width: 460px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.body_right_info_4{
+    height: 100px;
+    width: 460px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.body_left_car{
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 50px;
+}
+.important{
+    color: red;
+    font-size: 40px;
+
+}
+.but{
+    font-size: 28px;
+    height: 55px;
+    width: 96px;
+    border-radius: 13px;
+    margin-left: 10px;
+}
+.tip{
+    margin-top: 250px;
+}
+.c{
+    color: #ff4b03;
+}
+.c:hover{
+    color: #cb4330;
+}
+.tip{
+    margin-top: 250px;
+}

@@ -1,0 +1,29 @@
+.welcome{
+    margin: auto;
+    color: snow;
+}
+.name{
+    color: #e6d1d1;
+}
+.co{
+    color: #cb4330;
+}
+.blank{
+    margin-top: 40px;
+}
+.c{
+    color: #ff4b03;
+}
+.c:hover{
+    color: #cb4330;
+}
+.tip{
+    margin-top: 250px;
+}
+.l{
+    margin-right: 8px;
+}
+.b{
+    margin-bottom: 18px;
+}
+

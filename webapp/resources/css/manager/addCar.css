@@ -1,0 +1,26 @@
+.welcome{
+    margin: auto;
+    color: snow;
+}
+.top{
+    margin-top: 50px;
+}
+.red{
+    color: #d6050f;
+}
+.tip{
+    margin-top: 250px;
+}
+.c{
+    color: #ff4b03;
+}
+.c:hover{
+    color: #cb4330;
+}
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link{
+    color: white;
+    background-color: #ff787b;
+}
+.b{
+    margin-bottom: 20px;
+}

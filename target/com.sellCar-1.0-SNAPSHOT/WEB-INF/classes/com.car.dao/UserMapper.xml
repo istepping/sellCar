@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--@author 孙磊-->
+<!--@time 2018/7/13-->
+<!--@note dao层映射文件-->
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.car.dao.UserMapper">
+    <!--对应接口函数以及返回数据对应的实体类-->
+    <select id="queryById" resultType="com.car.entity.User">
+        select * from dbo.[user] where u_id=#{uId};
+    </select>
+    <select id="queryByNameAndPassword" resultType="com.car.entity.User">
+        select * from dbo.[user] where u_name=#{name} and u_password=#{password};
+    </select>
+    <select id="queryUserByName" resultType="com.car.entity.User">
+        select * from dbo.[user] where u_name=#{uName}
+    </select>
+    <insert id="insertUser">
+        insert into dbo.[user] (u_name,u_password,u_phone,u_address) values (#{uName},#{uPassword},#{uPhone},#{uAddress});
+    </insert>
+    <delete id="deleteUser">
+        update dbo.[user] set u_state=2 where u_name=#{name} and u_password=#{password};
+    </delete>
+    <update id="updateUserPhone">
+         update dbo.[user] set u_phone=#{phone} where u_name=#{name} and u_password=#{password};
+    </update>
+    <update id="updateUserAddress">
+        update dbo.[user] set u_address=#{address} where u_name=#{name} and u_password=#{password};
+    </update>
+    <update id="updateUserState">
+        update dbo.[user] set u_state=#{state} where u_name=#{name} and u_password=#{password};
+    </update>
+    <update id="updateUserPassword">
+        update dbo.[user] set u_password=#{password} where u_id=#{uId}
+    </update>
+</mapper>

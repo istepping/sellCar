@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--@author 孙磊-->
+<!--@time 2018/7/13-->
+<!--@note dao层映射文件-->
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.car.dao.CarMapper">
+    <resultMap id="carMap" type="com.car.entity.Car">
+        <id property="cId" column="c_id"/>
+        <result property="cBrand" column="c_brand"/>
+        <result property="cColor" column="c_color"/>
+        <result property="cPrice" column="c_price"/>
+        <result property="cNum" column="c_num"/>
+        <result property="cUrl" column="c_url"/>
+        <result property="cState" column="c_state"/>
+        <result property="cCatalog" column="c_catalog"/>
+        <discriminator javaType="String" column="c_catalog">
+            <case value="SUV" resultType="com.car.entity.Suv">
+                <result property="cType" column="c_type"/>
+            </case>
+            <case value="NEV" resultType="com.car.entity.Nev">
+                <result property="cEnergy" column="c_energy"/>
+            </case>
+            <case value="sportCar" resultType="com.car.entity.SportCar">
+                <result property="cStyle" column="c_style"/>
+            </case>
+        </discriminator>
+    </resultMap>
+    <select id="queryById" resultMap="carMap">
+        select * from car where c_id=#{id}
+    </select>
+    <select id="queryAll" resultMap="carMap">
+        select * from car;
+    </select>
+    <insert id="insertCar" parameterType="com.car.entity.Car">
+        <if test="cCatalog == 'SUV'">
+            insert into car(c_brand,c_color,c_price,c_num,c_url,c_state,c_catalog,c_type) values (#{cBrand},#{cColor},#{cPrice},#{cNum},#{cUrl},#{cState},#{cCatalog},#{cType})
+        </if>
+        <if test="cCatalog=='NEV'">
+            insert into car(c_brand,c_color,c_price,c_num,c_url,c_state,c_catalog,c_energy) values (#{cBrand},#{cColor},#{cPrice},#{cNum},#{cUrl},#{cState},#{cCatalog},#{cEnergy})
+        </if>
+        <if test="cCatalog=='sportCar'">
+            insert into car(c_brand,c_color,c_price,c_num,c_url,c_state,c_catalog,c_style) values (#{cBrand},#{cColor},#{cPrice},#{cNum},#{cUrl},#{cState},#{cCatalog},#{cStyle})
+        </if>
+    </insert>
+    <update id="updateCarPrice">
+        update car set c_price=#{price} where c_id=#{id};
+    </update>
+    <update id="updateCarState">
+        update car set c_state=#{state} where c_id=#{id};
+    </update>
+    <delete id="deleteCar">
+        delete  from car where c_id=#{id};
+    </delete>
+    <update id="updateCarNum">
+        update car set c_num=#{num} where c_id=#{id}
+    </update>
+    <select id="queryCarByCatalog" resultMap="carMap">
+        select * from car where c_catalog = #{cCatalog};
+    </select>
+</mapper>

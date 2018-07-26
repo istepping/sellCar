@@ -1,0 +1,53 @@
+/*<!--@author 黄伟 杨圳达-->*/
+/*<!--@time 2018/7/15-->*/
+/*<!--@apiNote 主界面-->*/
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #F0FFFF;
+    height: auto;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: rgba(255, 255, 255, .95);
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+
+}
+
+.carbox {
+    margin: 50px;
+}
+.share {
+    font-size: 20px;
+    position: absolute;
+    top: 0px;
+    right: 44px;
+    color: #F0FFFF;
+    height: 23px;
+    display: flex;
+    justify-content: flex-end;
+    top: 104px;
+    margin-left: 100px;
+    /*padding-right: 100px;*/;
+}
+
+.title {
+    background-color: #F0FFFF;
+    padding-top: 5px;
+    padding-bottom: 51px;
+    font-size: 24px;
+}
+.red{
+    color: #d6050f;
+}
+.tip{
+    margin-top: 250px;
+}

@@ -1,0 +1,43 @@
+html {
+    height: 100%;
+}
+body.bottom {
+    background: url(http://localhost:8090/resources/img/1.jpg) repeat-x bottom;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: rgba(255,255,255,.95);
+}
+.welcome{
+    margin: auto;
+    color: snow;
+}
+.tip{
+    margin-top: 250px;
+}
+.type{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 126px;
+}
+.car{
+    background-color: #F0FFFF;
+    position: fixed;
+    margin-left: 400px;
+    margin-right: 20px;
+    opacity: 0.6;
+
+}
+.order{
+    background-color: #F0FFFF;
+    border:2px solid green;
+    margin-left: 900px;
+    opacity: 0.6;
+}
+.text{
+    text-align:center;
+    height:50px;
+    font-size: 33px;
+}

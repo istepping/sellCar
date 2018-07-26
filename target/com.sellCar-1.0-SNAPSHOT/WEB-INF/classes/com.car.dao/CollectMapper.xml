@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--@author 孙磊-->
+<!--@time 2018/7/13-->
+<!--@note dao层映射文件-->
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.car.dao.CollectMapper">
+    <select id="queryByuId" resultType="com.car.entity.Collect">
+        select * from collect where u_id=#{uid};
+    </select>
+    <insert id="insertCollect">
+        insert into collect values (#{uid},#{cid});
+    </insert>
+    <delete id="deleteCollect">
+        delete from collect where u_id=#{uid} and c_id=#{cid}
+    </delete>
+</mapper>
